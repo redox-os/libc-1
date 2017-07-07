@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `user_regs_struct` struct in crate `libc`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, user_regs_struct">
+
+    <title>libc::user_regs_struct - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    <link rel="shortcut icon" href="https://doc.rust-lang.org/favicon.ico">
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <a href='../libc/index.html'><img src='https://www.rust-lang.org/logos/rust-logo-128x128-blk-v2.png' alt='logo' width='100'></a>
+        <p class='location'>Struct user_regs_struct</p><div class="block items"><ul><li><a href="#fields">Fields</a></li></ul></div><p class='location'><a href='index.html'>libc</a></p><script>window.sidebarCurrent = {name: 'user_regs_struct', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>libc</a>::<wbr><a class="struct" href=''>user_regs_struct</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/libc/macros.rs.html#42' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct user_regs_struct {
+    pub ebx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub ecx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub edx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub esi: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub edi: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub ebp: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub eax: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xds: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xes: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xfs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xgs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub orig_eax: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub eip: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xcs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub eflags: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub esp: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+    pub xss: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a>,
+}</pre><h2 id='fields' class='fields'>Fields</h2><span id='structfield.ebx' class="structfield">
+                           <span id='ebx.v' class='invisible'>
+                           <code>ebx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.ecx' class="structfield">
+                           <span id='ecx.v' class='invisible'>
+                           <code>ecx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.edx' class="structfield">
+                           <span id='edx.v' class='invisible'>
+                           <code>edx: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.esi' class="structfield">
+                           <span id='esi.v' class='invisible'>
+                           <code>esi: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.edi' class="structfield">
+                           <span id='edi.v' class='invisible'>
+                           <code>edi: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.ebp' class="structfield">
+                           <span id='ebp.v' class='invisible'>
+                           <code>ebp: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.eax' class="structfield">
+                           <span id='eax.v' class='invisible'>
+                           <code>eax: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xds' class="structfield">
+                           <span id='xds.v' class='invisible'>
+                           <code>xds: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xes' class="structfield">
+                           <span id='xes.v' class='invisible'>
+                           <code>xes: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xfs' class="structfield">
+                           <span id='xfs.v' class='invisible'>
+                           <code>xfs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xgs' class="structfield">
+                           <span id='xgs.v' class='invisible'>
+                           <code>xgs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.orig_eax' class="structfield">
+                           <span id='orig_eax.v' class='invisible'>
+                           <code>orig_eax: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.eip' class="structfield">
+                           <span id='eip.v' class='invisible'>
+                           <code>eip: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xcs' class="structfield">
+                           <span id='xcs.v' class='invisible'>
+                           <code>xcs: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.eflags' class="structfield">
+                           <span id='eflags.v' class='invisible'>
+                           <code>eflags: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.esp' class="structfield">
+                           <span id='esp.v' class='invisible'>
+                           <code>esp: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span><span id='structfield.xss' class="structfield">
+                           <span id='xss.v' class='invisible'>
+                           <code>xss: <a class="type" href="../libc/type.c_long.html" title="type libc::c_long">c_long</a></code>
+                           </span></span></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "libc";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
