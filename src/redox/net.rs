@@ -71,11 +71,15 @@ pub const TCP_KEEPIDLE: ::c_int = 4;
 pub const TCP_NODELAY: ::c_int = 8193;
 
 pub const IP_TTL: ::c_int = 8;
+pub const IP_MULTICAST_IF: ::c_int = 32;
 pub const IP_MULTICAST_LOOP: ::c_int = 9;
 pub const IP_MULTICAST_TTL: ::c_int = 10;
 pub const IP_ADD_MEMBERSHIP: ::c_int = 11;
 pub const IP_DROP_MEMBERSHIP: ::c_int = 12;
 
+pub const IPV6_UNICAST_HOPS: ::c_int = 16;
+pub const IPV6_MULTICAST_IF: ::c_int = 17;
+pub const IPV6_MULTICAST_HOPS: ::c_int = 18;
 pub const IPV6_MULTICAST_LOOP: ::c_int = 19;
 pub const IPV6_ADD_MEMBERSHIP: ::c_int = 20;
 pub const IPV6_DROP_MEMBERSHIP: ::c_int = 21;
