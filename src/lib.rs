@@ -26,6 +26,7 @@
 #![deny(missing_copy_implementations, safe_packed_borrows)]
 #![no_std]
 #![cfg_attr(feature = "rustc-dep-of-std", no_core)]
+#![cfg_attr(target_os = "redox", feature(static_nobundle))]
 
 #[macro_use]
 mod macros;
