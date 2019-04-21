@@ -306,6 +306,12 @@ pub const PTHREAD_MUTEX_RECURSIVE: ::c_int = 1;
 pub const PTHREAD_MUTEX_INITIALIZER: ::pthread_mutex_t = -1isize as *mut _;
 pub const PTHREAD_COND_INITIALIZER: ::pthread_cond_t = -1isize as *mut _;
 pub const PTHREAD_RWLOCK_INITIALIZER: ::pthread_rwlock_t = -1isize as *mut _;
+extern {
+    pub fn pthread_create(tid: *mut ::pthread_t,
+                          attr: *const ::pthread_attr_t,
+                          start: extern fn(*mut ::c_void) -> *mut ::c_void,
+                          arg: *mut ::c_void) -> ::c_int;
+}
 
 // signal.h
 pub const SIG_BLOCK: ::c_int = 0;
@@ -343,6 +349,11 @@ pub const SIGIO: ::c_int = 29;
 pub const SIGPWR: ::c_int = 30;
 pub const SIGSYS: ::c_int = 31;
 pub const NSIG: ::c_int = 32;
+extern {
+    pub fn pthread_sigmask(how: ::c_int,
+                           set: *const ::sigset_t,
+                           oldset: *mut ::sigset_t) -> ::c_int;
+}
 
 // stat.h
 pub const S_IFDIR: ::c_int = 0o040_000;
