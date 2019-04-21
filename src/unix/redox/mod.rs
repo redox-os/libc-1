@@ -19,7 +19,8 @@ pub type pthread_t = *mut ::c_void;
 pub type pthread_attr_t = *mut ::c_void;
 pub type pthread_cond_t = *mut ::c_void;
 pub type pthread_condattr_t = *mut ::c_void;
-pub type pthread_key_t = *mut ::c_void;
+// Must be usize due to libstd/sys_common/thread_local.rs, should be *mut ::c_void
+pub type pthread_key_t = usize;
 pub type pthread_mutex_t = *mut ::c_void;
 pub type pthread_mutexattr_t = *mut ::c_void;
 pub type pthread_rwlock_t = *mut ::c_void;
@@ -67,6 +68,11 @@ s! {
 
     pub struct in_addr {
         pub s_addr: ::in_addr_t,
+    }
+
+    pub struct ip_mreq {
+        pub imr_multiaddr: ::in_addr,
+        pub imr_interface: ::in_addr,
     }
 
     pub struct lconv {
@@ -289,6 +295,26 @@ extern {
 // netdb.h
 pub const EAI_SYSTEM: ::c_int = -11;
 
+// netinet/in.h
+// TODO: relibc
+pub const IP_TTL: ::c_int = 2;
+// TODO: relibc
+pub const IPV6_MULTICAST_LOOP: ::c_int = 19;
+// TODO: relibc
+pub const IPV6_ADD_MEMBERSHIP: ::c_int = 20;
+// TODO: relibc
+pub const IPV6_DROP_MEMBERSHIP: ::c_int = 21;
+// TODO: relibc
+pub const IPV6_V6ONLY: ::c_int = 26;
+// TODO: relibc
+pub const IP_MULTICAST_TTL: ::c_int = 33;
+// TODO: relibc
+pub const IP_MULTICAST_LOOP: ::c_int = 34;
+// TODO: relibc
+pub const IP_ADD_MEMBERSHIP: ::c_int = 35;
+// TODO: relibc
+pub const IP_DROP_MEMBERSHIP: ::c_int = 36;
+
 // netinet/tcp.h
 pub const TCP_NODELAY: ::c_int = 1;
 
@@ -306,6 +332,7 @@ pub const PTHREAD_MUTEX_RECURSIVE: ::c_int = 1;
 pub const PTHREAD_MUTEX_INITIALIZER: ::pthread_mutex_t = -1isize as *mut _;
 pub const PTHREAD_COND_INITIALIZER: ::pthread_cond_t = -1isize as *mut _;
 pub const PTHREAD_RWLOCK_INITIALIZER: ::pthread_rwlock_t = -1isize as *mut _;
+pub const PTHREAD_STACK_MIN : ::size_t = 4096;
 extern {
     pub fn pthread_create(tid: *mut ::pthread_t,
                           attr: *const ::pthread_attr_t,
@@ -389,7 +416,9 @@ pub const MSG_PEEK: ::c_int = 2;
 pub const SHUT_RD: ::c_int = 0;
 pub const SHUT_WR: ::c_int = 1;
 pub const SHUT_RDWR: ::c_int = 2;
+pub const SO_REUSEADDR: ::c_int = 2;
 pub const SO_ERROR: ::c_int = 4;
+pub const SO_BROADCAST: ::c_int = 6;
 pub const SO_RCVTIMEO: ::c_int = 20;
 pub const SO_SNDTIMEO: ::c_int = 21;
 pub const SOCK_STREAM: ::c_int = 1;
@@ -427,6 +456,7 @@ extern {
 }
 
 // unistd.h
+pub const _SC_PAGESIZE: ::c_int = 30;
 pub const SEEK_SET: ::c_int = 0;
 pub const SEEK_CUR: ::c_int = 1;
 pub const SEEK_END: ::c_int = 2;
