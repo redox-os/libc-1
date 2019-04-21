@@ -223,6 +223,7 @@ pub const DT_REG: u8 = 8;
 pub const DT_LNK: u8 = 10;
 pub const DT_SOCK: u8 = 12;
 
+#[cfg(not(target_os = "redox"))]
 pub const FD_CLOEXEC: ::c_int = 0x1;
 
 pub const USRQUOTA: ::c_int = 0;
