@@ -15,11 +15,11 @@
 #![crate_name = "libc"]
 #![crate_type = "rlib"]
 #![cfg_attr(not(feature = "rustc-dep-of-std"), deny(warnings))]
-#![allow(bad_style, overflowing_literals, improper_ctypes, unknown_lints)]
+#![allow(bad_style, overflowing_literals, improper_ctypes, unknown_lints, unused_attributes)]
 // Attributes needed when building as part of the standard library
 #![cfg_attr(
     feature = "rustc-dep-of-std",
-    feature(cfg_target_vendor, link_cfg, no_core)
+    feature(link_cfg, no_core)
 )]
 // Enable extra lints:
 #![cfg_attr(feature = "extra_traits", deny(missing_debug_implementations))]
@@ -91,9 +91,6 @@ cfg_if! {
     if #[cfg(windows)] {
         mod windows;
         pub use windows::*;
-    } else if #[cfg(target_os = "redox")] {
-        mod redox;
-        pub use redox::*;
     } else if #[cfg(target_os = "cloudabi")] {
         mod cloudabi;
         pub use cloudabi::*;
